@@ -1,0 +1,29 @@
+<div class="panel panel-primary">
+    <div class="panel-heading"
+         style="font-size:large">
+         {{::vm.title}}
+    </div>
+
+    <div class="panel-body">
+        <table class="table">
+            <thead>
+            <tr>
+                <td>Session Id</td>
+                <td>Car</td>
+                <td>Track</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="session in vm.sessions">
+                <td>
+                    <a href="#sessions/{{session.Id}}">
+                    {{session.Id}}
+                    </a>
+                </td>
+                <td>{{session.car}}</td>
+                <td>{{session.track}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

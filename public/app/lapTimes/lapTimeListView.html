@@ -1,0 +1,43 @@
+<div class="panel panel-primary">
+    <div class="panel-heading"
+         style="font-size:large">
+         <a class="btn btn-default"
+            ng-href="#sessionList"
+            style="width:80px">
+            < Back
+        </a>
+         {{::vm.title}}
+    </div>
+
+    <div class="panel-body">
+        <table class="table">
+            <thead>
+            <tr>
+                <td>Session Id</td>
+                <td>Lap Time</td>
+                <td>Date Time</td>
+                <td>Split 1</td>
+                <td>User Id</td>
+                <td>Split 2</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="lapTime in vm.lapTimes">
+                <td>{{lapTime.session_id}}</td>
+                <td>{{lapTime.lap_time}}</td>
+                <td>{{lapTime.date_time}}</td>
+                <td>{{lapTime.split1}}</td>
+                <td>{{lapTime.user_id}}</td>
+                <td>{{lapTime.split2}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="panel-footer">
+        <a class="btn btn-default"
+        ng-href="#sessionList"
+        style="width:80px">
+            < Back
+        </a>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Race Car Broom Broom</title>
+
+    <!-- Style sheets -->
+    <link href="styles/bootstrap.css" rel="stylesheet" />
+</head>
+
+<body ng-app="lapTimeManagement">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">            
+            <div class="navbar-header">                
+                <div class="navbar-brand"><img alt="Brand" src="/images/rfactor2.png" height="35" width="80"></div>
+            </div>
+             <p class="navbar-text">Race Car Broom Broom</p>
+        </div>
+    </nav>
+
+    <div class="container">
+        <ng-view></ng-view>
+    </div>
+
+    <!-- Library Scripts -->
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-resource.js"></script>
+    <script src="scripts/angular-mocks.js"></script>
+    <script src="scripts/angular-route.js"></script>
+    
+    <!-- Application Script -->
+    <script src="app/app.js"></script>
+    
+    <!-- Domain Classes -->
+    <script src="app/lapTimes/lapTime.js"></script>
+    <script src="app/sessions/sessions.js"></script>
+
+    <!-- Services -->
+    <script src="app/common/services/common.services.js"></script>
+    <script src="app/common/services/dataAccessService.js"></script>
+    <!--<script src="app/common/services/lapTimeResourceMock.js"></script>-->
+
+    <!-- Controllers -->
+    <script src="app/lapTimes/lapTimeListCtrl.js"></script>
+    <script src="app/sessions/sessionListCtrl.js"></script>
+    <script src="app/sessions/sessionDetailCtrl.js"></script>
+</body>
+
+</html>

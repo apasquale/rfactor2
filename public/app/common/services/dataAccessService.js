@@ -1,0 +1,23 @@
+var app;
+(function (app) {
+    var common;
+    (function (common) {
+        var DataAccessService = (function () {
+            function DataAccessService($resource) {
+                this.$resource = $resource;
+            }
+            DataAccessService.prototype.getLapTimeResource = function () {
+                return this.$resource("https://t1nj5fds0c.execute-api.ap-northeast-1.amazonaws.com/develop/laptimes/:sessionId");
+            };
+            DataAccessService.prototype.getSessionListResource = function () {
+                return this.$resource("https://t1nj5fds0c.execute-api.ap-northeast-1.amazonaws.com/develop/session/:sessionId");
+            };
+            DataAccessService.$inject = ["$resource"];
+            return DataAccessService;
+        })();
+        common.DataAccessService = DataAccessService;
+        angular
+            .module("common.services")
+            .service("dataAccessService", DataAccessService);
+    })(common = app.common || (app.common = {}));
+})(app || (app = {}));

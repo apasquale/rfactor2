@@ -20,21 +20,19 @@
         <table class="table">
             <thead>
             <tr>
-                <td>Session Id</td>
-                <td>Lap Time</td>
-                <td>Date Time</td>
-                <td>Split 1</td>
                 <td>User Id</td>
+                <td>Date Time</td>
+                <td>Lap Time</td>
+                <td>Split 1</td>
                 <td>Split 2</td>
             </tr>
             </thead>
             <tbody>
             <tr ng-repeat="lapTime in vm.session.laptimes">
-                <td>{{lapTime.session_id}}</td>
-                <td>{{lapTime.lap_time}}</td>
-                <td>{{lapTime.date_time}}</td>
-                <td>{{lapTime.split1}}</td>
                 <td>{{lapTime.user_id}}</td>
+                <td>{{lapTime.date_time}}</td>
+                <td>{{lapTime.lap_time}}</td>
+                <td>{{lapTime.split1}}</td>
                 <td>{{lapTime.split2}}</td>
             </tr>
             </tbody>

@@ -25,15 +25,17 @@
                 <td>Lap Time</td>
                 <td>Split 1</td>
                 <td>Split 2</td>
+                <td>Split 3</td>
             </tr>
             </thead>
             <tbody>
             <tr ng-repeat="lapTime in vm.session.laptimes">
                 <td>{{lapTime.user_id}}</td>
-                <td>{{lapTime.date_time}}</td>
-                <td>{{lapTime.lap_time}}</td>
-                <td>{{lapTime.split1}}</td>
-                <td>{{lapTime.split2}}</td>
+                <td>{{lapTime.date_time | date:'dd-MM-yyyy HH:mm:ss Z'}}</td>
+                <td>{{lapTime.lap_time | number:3}}</td>
+                <td>{{lapTime.split1 | number:3}}</td>
+                <td>{{lapTime.split2 - lapTime.split1 | number:3}}</td>
+                <td>{{lapTime.lap_time - lapTime.split2 | number:3}}</td>
             </tr>
             </tbody>
         </table>

@@ -24,11 +24,11 @@
   ],
   "dependencies": {
     "lodash": "~3.10.1",
+    "angular-lodash-module": "~1.2.0",
     "angular": "~1.4.8",
     "angular-resource": "~1.4.8",
     "angular-mocks": "~1.4.8",
-    "angular-route": "~1.4.8",
-    "angular-lodash-module": "~1.2.0",
+    "angular-route": "~1.4.8",    
     "bootstrap": "~3.3.6"
   }
 }

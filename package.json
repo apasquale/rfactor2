@@ -4,7 +4,8 @@
   "description": "An Rfactor lap time reporting engine",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "postinstall": "bower install"
   },
   "dependencies": {
     "body-parser": "^1.14.2",

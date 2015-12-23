@@ -1,7 +1,7 @@
 var app;
 (function (app) {
-    var userList;
-    (function (userList) {
+    var sessions;
+    (function (sessions) {
         var SessionDetailCtrl = (function () {
             function SessionDetailCtrl($routeParams, dataAccessService) {
                 var _this = this;
@@ -21,5 +21,5 @@ var app;
         angular
             .module("lapTimeManagement")
             .controller("SessionDetailCtrl", SessionDetailCtrl);
-    })(userList = app.userList || (app.userList = {}));
+    })(sessions = app.sessions || (app.sessions = {}));
 })(app || (app = {}));

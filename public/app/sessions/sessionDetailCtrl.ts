@@ -1,4 +1,4 @@
-module app.userList {
+module app.sessions {
 	interface ISessionDetailModel {
 		title: string;
 		session: app.domain.ISession;

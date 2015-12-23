@@ -17,8 +17,7 @@ namespace app.common {
 		implements IDataAccessService {
 			
 		static $inject = ["$resource"]; 
-		constructor(private $resource: ng.resource.IResourceService) {
-			
+		constructor(private $resource: ng.resource.IResourceService) {			
 		}
 		
 		getLapTimeResource(): ng.resource.IResourceClass<ILapTimeResource> {
@@ -28,6 +27,10 @@ namespace app.common {
 		getSessionListResource(): ng.resource.IResourceClass<ISessionResource> {
 			return this.$resource("https://t1nj5fds0c.execute-api.ap-northeast-1.amazonaws.com/develop/session/:sessionId");
 		}
+        
+        getUserSessionListResource(): ng.resource.IResourceClass<ISessionResource> {
+			return this.$resource("https://t1nj5fds0c.execute-api.ap-northeast-1.amazonaws.com/develop/session/:sessionId/user/:userId");
+		}        
 	}
 	
 	angular

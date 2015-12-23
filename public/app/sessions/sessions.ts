@@ -3,6 +3,7 @@ namespace app.domain {
 		Id: number;
 		car: string;
 		track: string;
+        userId: number;
         laptimes: ILapTime[];
 	}
 	
@@ -11,7 +12,8 @@ namespace app.domain {
 			public Id: number,
 			public car: string,
 			public track: string,
-            public laptimes: ILapTime[]) {			
+            public userId: number,
+            public laptimes: ILapTime[]) {
 		}
 	}
 }

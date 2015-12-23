@@ -1,0 +1,34 @@
+{
+  "name": "race-car",
+  "description": "An Rfactor lap time reporting engine",
+  "main": "app.js",
+  "authors": [
+    "Anthony Pasquale <apasquale@anzgcis.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "node",
+    "heroku",
+    "express"
+  ],
+  "moduleType": [],
+  "homepage": "https://rfactor2.herokuapp.com/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "~3.10.1",
+    "angular": "~1.4.8",
+    "angular-resource": "~1.4.8",
+    "angular-mocks": "~1.4.8",
+    "angular-route": "~1.4.8",
+    "angular-lodash-module": "~1.2.0",
+    "bootstrap": "~3.3.6"
+  }
+}

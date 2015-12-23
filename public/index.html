@@ -5,7 +5,7 @@
     <title>Rfactor 2</title>
 
     <!-- Style sheets -->
-    <link href="styles/bootstrap.css" rel="stylesheet" />
+    <link href="lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
 </head>
 
 <body ng-app="lapTimeManagement">
@@ -23,10 +23,16 @@
     </div>
 
     <!-- Library Scripts -->
-    <script src="scripts/angular.js"></script>
-    <script src="scripts/angular-resource.js"></script>
+    <!--<script src="scripts/angular.js"></script>-->
+    <!--<script src="scripts/angular-resource.js"></script>
     <script src="scripts/angular-mocks.js"></script>
-    <script src="scripts/angular-route.js"></script>
+    <script src="scripts/angular-route.js"></script>-->
+    <script src="lib/lodash/lodash.js"></script>
+    <script src="lib/angular-lodash-module/angular-lodash-module.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-mocks/angular-mocks.js"></script>
+    <script src="lib/angular-resource/angular-resource.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
     
     <!-- Application Script -->
     <script src="app/app.js"></script>
@@ -44,6 +50,7 @@
     <script src="app/lapTimes/lapTimeListCtrl.js"></script>
     <script src="app/sessions/sessionListCtrl.js"></script>
     <script src="app/sessions/sessionDetailCtrl.js"></script>
+    <script src="app/sessions/sessionUserCtrl.js"></script>
 </body>
 
 </html>

@@ -6,6 +6,7 @@ namespace app.domain {
 		split1: number;
 		user_id: string;
 		split2: number;
+        fastest: boolean;
 	}
 	
 	export class LapTime implements ILapTime {
@@ -15,7 +16,9 @@ namespace app.domain {
 			public date_time: Date,
 			public split1: number,
 			public user_id: string,
-			public split2: number) {			
+			public split2: number,
+            public fastest: boolean
+            ) {			
 		}
 	}
 }

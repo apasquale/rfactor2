@@ -1,7 +1,7 @@
 {
-  "name": "Race Car Lap times",
+  "name": "race-car",
   "description": "An Rfactor lap time reporting engine",
-  "repository": "https://github.com/heroku/node-js-getting-started",
+  "repository": "https://github.com/apasquale/rfactor2",
   "logo": "http://node-js-sample.herokuapp.com/node.svg",
   "keywords": ["node", "express", "static"],
   "image": "heroku/nodejs"

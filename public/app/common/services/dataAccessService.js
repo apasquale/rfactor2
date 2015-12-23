@@ -12,6 +12,9 @@ var app;
             DataAccessService.prototype.getSessionListResource = function () {
                 return this.$resource("https://t1nj5fds0c.execute-api.ap-northeast-1.amazonaws.com/develop/session/:sessionId");
             };
+            DataAccessService.prototype.getUserSessionListResource = function () {
+                return this.$resource("https://t1nj5fds0c.execute-api.ap-northeast-1.amazonaws.com/develop/session/:sessionId/user/:userId");
+            };
             DataAccessService.$inject = ["$resource"];
             return DataAccessService;
         })();

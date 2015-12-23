@@ -29,8 +29,8 @@
             </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="lapTime in vm.session.laptimes">
-                <td>{{lapTime.user_id}}</td>
+            <tr ng-repeat="lapTime in vm.session.laptimes" ng-class="{success: lapTime.fastest}">
+                <td><a href="#/sessions/{{lapTime.session_id}}/user/{{lapTime.user_id}}">{{lapTime.user_id}}</a></td>
                 <td>{{lapTime.date_time | date:'dd-MM-yyyy HH:mm:ss Z'}}</td>
                 <td>{{lapTime.lap_time | number:3}}</td>
                 <td>{{lapTime.split1 | number:3}}</td>

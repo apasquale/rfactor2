@@ -12,11 +12,10 @@ module app.userList {
 	class SessionUserCtrl implements ISessionDetailModel {
 		title: string;
 		session: app.domain.ISession;
-		static $inject = ["$routeParams","dataAccessService","_"];
+		static $inject = ["$routeParams","dataAccessService"];
 		constructor(
 				private $routeParams: IUserSessionParams, 
-				private dataAccessService: app.common.DataAccessService,
-                private _) {
+				private dataAccessService: app.common.DataAccessService) {
 			
 			this.title = "Lap Time List"
 			
@@ -27,7 +26,7 @@ module app.userList {
 			var userSessionResource = dataAccessService.getUserSessionListResource();
 			userSessionResource.get({sessionId: sessionId, userId: userId},
 				(data: app.domain.ISession) => {
-                _.max(data.laptimes, 'lap_time').fastest = true;  
+                _.min(data.laptimes, 'lap_time').fastest = true;  
 				this.session = data;
                 if(!this.session.Id) {
                     this.session.Id = sessionId;

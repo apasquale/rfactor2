@@ -1,16 +1,9 @@
 namespace app {
 	var main = angular.module("lapTimeManagement",
-		["ngRoute","common.services","lodash"]);
+		["ngRoute","common.services"]);
 					 
 	main.config(routeConfig);
     
-    // // allow DI for use in controllers, unit tests
-    // main.constant('_', window._)
-    // // use in views, ng-repeat="x in _.range(3)"
-    // main.run(function ($rootScope) {
-    //     $rootScope._ = window._;
-    // });
-	
 	routeConfig.$inject = ["$routeProvider"];
 	function routeConfig($routeProvider: ng.route.IRouteProvider): void {
 		

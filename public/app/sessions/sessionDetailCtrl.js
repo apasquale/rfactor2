@@ -3,20 +3,19 @@ var app;
     var userList;
     (function (userList) {
         var SessionDetailCtrl = (function () {
-            function SessionDetailCtrl($routeParams, dataAccessService, _) {
+            function SessionDetailCtrl($routeParams, dataAccessService) {
                 var _this = this;
                 this.$routeParams = $routeParams;
                 this.dataAccessService = dataAccessService;
-                this._ = _;
                 this.title = "Lap Time List";
                 var sessionId = $routeParams.sessionId;
                 var sessionResource = dataAccessService.getSessionListResource();
                 sessionResource.get({ sessionId: sessionId }, function (data) {
-                    _.max(data.laptimes, 'lap_time').fastest = true;
+                    _.min(data.laptimes, 'lap_time').fastest = true;
                     _this.session = data;
                 });
             }
-            SessionDetailCtrl.$inject = ["$routeParams", "dataAccessService", "_"];
+            SessionDetailCtrl.$inject = ["$routeParams", "dataAccessService"];
             return SessionDetailCtrl;
         })();
         angular

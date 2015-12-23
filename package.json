@@ -11,7 +11,8 @@
     "body-parser": "^1.14.2",
     "bower": "^1.7.1",
     "ejs": "2.3.3",
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "gulp": "^3.9.0"
   },
   "engines": {
     "node": "0.12.7"
@@ -25,5 +26,13 @@
     "heroku",
     "express"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-ignore": "^2.0.1",
+    "gulp-shell": "^0.5.1",
+    "gulp-typescript": "^2.10.0",
+    "run-sequence": "^1.1.5"
+  }
 }

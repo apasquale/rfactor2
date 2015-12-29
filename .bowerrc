@@ -1,5 +1,4 @@
 {
-  "directory": "public/lib/",
   "analytics": false,
   "timeout": 120000,
   "registry": {

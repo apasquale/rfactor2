@@ -65,7 +65,6 @@ gulp.task("compile:client", function () {
 		
 	return tsResult.js
         .pipe(sourcemaps.init())
-		.pipe(concat("app.js"))
 		.pipe(ngAnnotate())
 		.pipe(sourcemaps.write("."))
 		.pipe(gulp.dest("./build/scripts"));
@@ -121,7 +120,16 @@ gulp.task("clean", function (cb) {
 
 
 // ** Utils ** //
-gulp.task("serve", ["build:prod"], function (cb) {
+gulp.task("serve", ["build"], function (cb) {
+    exec('node server/server.js', function (err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
+});
+
+// ** Utils ** //
+gulp.task("serve:prod", ["build:prod"], function (cb) {
     exec('node server/server.js', function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);

@@ -32,7 +32,23 @@
     <!-- endbuild -->
     
     <!-- build:app(build) scripts/app.js -->
-    <script src="scripts/app.js"></script>
+    <!-- Application Script -->
+    <script src="scripts/app/app.js"></script>
+    
+    <!-- Domain Classes -->
+    <script src="scripts/app/lapTimes/lapTime.js"></script>
+    <script src="scripts/app/sessions/sessions.js"></script>
+
+    <!-- Services -->
+    <script src="scripts/app/common/services/common.services.js"></script>
+    <script src="scripts/app/common/services/dataAccessService.js"></script>
+    <!--<script src="scripts/app/common/services/lapTimeResourceMock.js"></script>-->
+
+    <!-- Controllers -->
+    <script src="scripts/app/lapTimes/lapTimeListCtrl.js"></script>
+    <script src="scripts/app/sessions/sessionListCtrl.js"></script>
+    <script src="scripts/app/sessions/sessionDetailCtrl.js"></script>
+    <script src="scripts/app/sessions/sessionUserCtrl.js"></script>
     <!-- endbuild -->
 </body>
 

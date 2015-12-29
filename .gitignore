@@ -3,4 +3,3 @@ node_modules
 Dockerfile
 docker-compose.yml
 bower_components
-build

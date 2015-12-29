@@ -28,3 +28,13 @@ Lessons learned:
 - Wiredep is really handy for linking all your bower packages and css into your html
 - Heroku does not love gulp as much as I hoped
     - It build some stuff but fell apart at more complex tasks such as minification and wiredep
+    
+## Building and running the code
+1. Clone the repo: `git clone https://git.heroku.com/rfactor2.git`
+1. Cd into the directory: `cd rfactor2`
+1. Install all the required npm packages: `npm install`
+1. Install all the bower packages: `bower install`
+1. (optional) Build the code: `gulp build` or `gulp build:prod`
+1. Run the code: `gulp serve` or `gulp serve:prod`
+
+> If pushing to heroku run a `gulp build:prod` before committing all to ensure the minified files are deployed 

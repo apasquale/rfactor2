@@ -4,7 +4,7 @@ module app.sessions {
 		session: app.domain.ISession;
 	}
 	
-	interface ISessionParams extends ng.route.IRouteParamsService{
+	export interface ISessionParams extends ng.route.IRouteParamsService{
 		sessionId: number;
 	}
 	

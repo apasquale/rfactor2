@@ -11,6 +11,7 @@ var uglify = require("gulp-uglify");
 var minifyCss = require("gulp-minify-css");
 var del = require("del");
 var exec = require('child_process').exec
+var karma = require('gulp-karma');
 
 
 var paths = {
@@ -120,7 +121,7 @@ gulp.task("clean", function (cb) {
 
 
 // ** Utils ** //
-gulp.task("serve", ["build"], function (cb) {
+gulp.task("serve", ["app:test"], function (cb) {
     exec('node server/server.js', function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
@@ -129,12 +130,39 @@ gulp.task("serve", ["build"], function (cb) {
 });
 
 // ** Utils ** //
-gulp.task("serve:prod", ["build:prod"], function (cb) {
+gulp.task("serve:prod", ["app:test:prod"], function (cb) {
     exec('node server/server.js', function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
     cb(err);
   });
+});
+
+// ** Tests ** //
+gulp.task('app:test',['build'], function(done) {
+    // Be sure to return the stream
+    return gulp.src('./idontexist')
+        .pipe(karma({
+            configFile: 'client/test/test-unit-conf.js',
+            action: 'run'
+        }))
+        .on('error', function(err) {
+            // Make sure failed tests cause gulp to exit non-zero
+            throw err;
+        });
+});
+
+gulp.task('app:test:prod',['build:prod'], function(done) {
+    // Be sure to return the stream
+    return gulp.src('./idontexist')
+        .pipe(karma({
+            configFile: 'client/test/test-unit-conf.js',
+            action: 'run'
+        }))
+        .on('error', function(err) {
+            // Make sure failed tests cause gulp to exit non-zero
+            throw err;
+        });
 });
 
 function reportChange(event) {

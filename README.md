@@ -33,6 +33,7 @@ Very little attention was paid to the Web Design and optimisation side of it (ot
 - Use socket.io to get some websocket goodness into here (new laptime notifications maybe)
 - UI tests
 - Learn about image optimisation techniques
+- Rather than push directly to heroku, setup some CI/CD workflow to do all this in a controlled manner
     
 ## Building and running the code
 1. Clone the repo: `git clone https://git.heroku.com/rfactor2.git`

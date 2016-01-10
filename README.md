@@ -29,12 +29,17 @@ Very little attention was paid to the Web Design and optimisation side of it (ot
 - Heroku does not love gulp as much as I hoped
     - It build some stuff but fell apart at more complex tasks such as minification and wiredep
     
+## Things I want to do if I ever get time:
+- Use socket.io to get some websocket goodness into here (new laptime notifications maybe)
+- UI tests
+- Learn about image optimisation techniques
+    
 ## Building and running the code
 1. Clone the repo: `git clone https://git.heroku.com/rfactor2.git`
 1. Cd into the directory: `cd rfactor2`
 1. Install all the required npm packages: `npm install`
 1. Install all the bower packages: `bower install`
-1. (optional) Build the code: `gulp build` or `gulp build:prod`
+1. (optional) Build and test the code: `gulp app:test` or `gulp app:test:prod`
 1. Run the code: `gulp serve` or `gulp serve:prod`
 
-> If pushing to heroku run a `gulp build:prod` before committing all to ensure the minified files are deployed 
+> If pushing to heroku run a `gulp app:test:prod` before committing all `git push all master` (with the correct targets setup to target both github and heorku) to ensure the minified files are deployed 

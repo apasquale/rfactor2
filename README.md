@@ -7,19 +7,19 @@ Hosted at https://rfactor2.herokuapp.com/
 ## Purpose
 
 The aim of this application is to learn AngularJS with Typescript working with the Visual Studio Code editor as well as some of the more modern web development tools like gulp, wiredep and Heroku.
-Very little attention was paid to the Web Design and optimisation side of it (other than figuring out how to use gulp for minification and concatenation of scripts and styles) as my main focus was learning Typescript.
+Very little attention was paid to the way it looked (especially on mobile) or the way data was presented (other than figuring out how to use gulp for minification and concatenation of scripts and styles) as my main focus was learning Typescript and figure out how a modern web development workflow would work.
 
 ## Technologies used:
 - Typescript - a typed superset of JavaScript (www.typescriptlang.org/) 
 - AngularJS - SPA framework (https://angularjs.org/)
 - NodeJS - Server side javascript (https://nodejs.org/)
 - ExpressJS - Web app framework for nodejs (http://expressjs.com/)
-- lodash - LINQ for JS (https://lodash.com/)
+- Lodash - LINQ for JS (https://lodash.com/)
 - Boostrap - CSS framework (http://getbootstrap.com/)
 - Gulp - build pipeline (http://gulpjs.com/)
-- wiredep - dynamically linking bower packages to your html (https://github.com/taptapship/wiredep)
+- Wiredep - dynamically linking bower packages to your html (https://github.com/taptapship/wiredep)
 - Heroku - hosting (https://www.heroku.com/)
-- vscode - code editing
+- Visual Studio Code - code editior (https://code.visualstudio.com/)
 
 ## Lessons learned:
 - Love Typescript - will use it more
@@ -34,6 +34,7 @@ Very little attention was paid to the Web Design and optimisation side of it (ot
 - UI tests
 - Learn about image optimisation techniques
 - Rather than push directly to heroku, setup some CI/CD workflow to do all this in a controlled manner
+- Import it into Visual Studio and see how it handles TypeScript
     
 ## Building and running the code
 1. Clone the repo: `git clone https://git.heroku.com/rfactor2.git`

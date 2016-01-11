@@ -34,6 +34,7 @@ Very little attention was paid to the way it looked (especially on mobile), the 
 - UI tests
 - Learn about image optimisation techniques
 - Rather than push directly to heroku, setup some CI/CD workflow to do all this in a controlled manner
+    - This will allow me to not need to check in the build folder with its artifacts
 - Import it into Visual Studio and see how it handles TypeScript
 - Still not 100% happy with the overall structure of the codebase - Need to research best practises
     

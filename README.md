@@ -7,7 +7,7 @@ Hosted at https://rfactor2.herokuapp.com/
 ## Purpose
 
 The aim of this application is to learn AngularJS with Typescript working with the Visual Studio Code editor as well as some of the more modern web development tools like gulp, wiredep and Heroku.
-Very little attention was paid to the way it looked (especially on mobile) or the way data was presented (other than figuring out how to use gulp for minification and concatenation of scripts and styles) as my main focus was learning Typescript and figure out how a modern web development workflow would work.
+Very little attention was paid to the way it looked (especially on mobile), the way data was presented or how optimised the website was (other than figuring out how to use gulp for minification and concatenation of scripts and styles) as my main focus was learning Typescript and to figure out how a modern web development workflow would work.
 
 ## Technologies used:
 - Typescript - a typed superset of JavaScript (www.typescriptlang.org/) 
@@ -35,6 +35,7 @@ Very little attention was paid to the way it looked (especially on mobile) or th
 - Learn about image optimisation techniques
 - Rather than push directly to heroku, setup some CI/CD workflow to do all this in a controlled manner
 - Import it into Visual Studio and see how it handles TypeScript
+- Still not 100% happy with the overall structure of the codebase - Need to research best practises
     
 ## Building and running the code
 1. Clone the repo: `git clone https://git.heroku.com/rfactor2.git`
